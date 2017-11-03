@@ -4,7 +4,8 @@
    *Author: Webchefz
    *Author URI: https://www.webchefz.com
    *Description: Manage Confetti
-   *Plugin URI:  https://github.com/gulshanbasouli/Webchefz
+   *Plugin URI:  https://github.com/gulshanbasouli/wordpress-confetti-plugin
+
    Version: 0.1
  */
 add_action( 'admin_post_mgConfetti_save_option', 'process_mgConfetti_option' );
