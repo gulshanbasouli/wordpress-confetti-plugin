@@ -45,22 +45,30 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/menus.inc.php';
 
 
 // Action & Filter Hooks
-add_action( 'admin_menu', 'mgconfetti_add_admin_menu' );
+add_action( 'admin_menu', 'mg_confetti_add_admin_menu' );
 
 
 
 
 function mg_confetti_get_data() {
+
     $arr = get_option( 'mg_confetti_array' );
 
+    if ( empty( $arr ) ) {
+        return '';
+    }
+
     ob_start();
-    echo '<pre>';
-    print_r( $arr );
-    echo '</pre>';
+    ?>
+    <ul>
+        <li><strong>Price:</strong> <?php echo esc_html( $arr['mg_confetti_price'] ?? '' ); ?></li>
+        <li><strong>Discount Code:</strong> <?php echo esc_html( $arr['mg_confetti_discount_code'] ?? '' ); ?></li>
+        <li><strong>Discount Percent:</strong> <?php echo esc_html( $arr['mg_confetti_discount_percent'] ?? '' ); ?></li>
+    </ul>
+    <?php
 
     return ob_get_clean();
 }
-
 
 add_shortcode('confetti-data', 'mg_confetti_get_data');
 ?>
