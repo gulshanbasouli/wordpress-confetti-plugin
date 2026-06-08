@@ -1,6 +1,14 @@
 <?php
-function mgconfetti_add_admin_menu()
+function mg_confetti_add_admin_menu()
 {
-   add_submenu_page( 'options-general.php' , 'Minigiv Confetti', 'Minigiv Confetti' , 'manage_options' , __FILE__ . '_display_confetti' , 'mg_confetti_content');
+add_submenu_page(
+    'options-general.php',
+    __( 'Minigiv Confetti', 'minigiv-confetti' ),
+    __( 'Minigiv Confetti', 'minigiv-confetti' ),
+    'manage_options',
+    'minigiv-confetti',
+    'mg_confetti_content'
+);
+
 }
 ?>
