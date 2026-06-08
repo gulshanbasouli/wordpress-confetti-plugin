@@ -111,7 +111,7 @@ GitHub:
 https://github.com/gulshanbasouli
 
 Plugin Repository:
-https://github.com/gulshanbasouli/wordpress-confetti-plugin
+https://github.com/gulshanbasouli/minigiv-confetti
 
 ---
 
